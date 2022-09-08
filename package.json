@@ -1,12 +1,25 @@
 {
   "name": "token-generator-handler",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.0",
+  "description": "A token generator and authorisation handler for cloudflare workers",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "c8 --100 ava",
+    "lint": "standard",
+    "fix": "standard --fix",
+    "validate": "npm run lint && npm run test"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Autotelic Development Ltd <info@autotelic.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "ava": "^4.3.3",
+    "c8": "^7.12.0",
+    "miniflare": "^2.8.0",
+    "sinon": "^14.0.0"
+  },
+  "dependencies": {
+    "base64url": "^3.0.1"
+  }
 }
